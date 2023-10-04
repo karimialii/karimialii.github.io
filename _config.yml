@@ -16,9 +16,10 @@ minimal: true               # use a dark header
 # Menu
 
 navigation:
-  - {file: "/cv", title: "CV"} # Assuming your CV page is named cv.md or cv.html
+  - {file: "/CV.html", title: "CV"}
   - {file: "/Publications", title: "Publications"}
   - {url: "https://www.apper-srl.it/", title: "My Lab"}
+
 
   
 

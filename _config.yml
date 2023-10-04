@@ -15,10 +15,11 @@ minimal: true               # use a dark header
 
 # Menu
 
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "/CV.md", title: "CV"}
+navigation:
+  - {url: "/cv/", title: "CV"} # Assuming your CV page is named cv.md or cv.html
   - {file: "/Publications", title: "Publications"}
   - {url: "https://www.apper-srl.it/", title: "My Lab"}
+
   
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons

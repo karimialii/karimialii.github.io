@@ -10,14 +10,15 @@ date_format: "%B %d, %Y"
 
 show_excerpts: true         # show article excerpts on the home page
 show_frame: true            # adds a gray frame to the site
-show_sidebar: true         # show a sidebar instead of the usual header
+show_sidebar: false         # show a sidebar instead of the usual header
 minimal: true               # use a dark header
 
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: "Home Change", icon: home}
-  - {file: "README.md", title: "About me", icon: user}
+  - {file: "/CV.pdf", title: "CV", icon: home}
+  - {url: "https://www.apper-srl.it/", title: "My Lab"}
+  - {file: "/Publications", title: "Publications"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:ali.karimi@unina.it"}

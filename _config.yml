@@ -16,7 +16,7 @@ minimal: true               # use a dark header
 # Menu
 
 navigation:
-  - {url: "/CV/cv.html", title: "CV"}
+  - {url: "/CV/cv.html", title: "Curriculum Vitae"}
   - {file: "/Publications", title: "Publications"}
   - {url: "https://www.apper-srl.it/", title: "My Lab"}
 

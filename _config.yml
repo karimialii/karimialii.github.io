@@ -16,9 +16,10 @@ minimal: true               # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "/CV.pdf", title: "CV", icon: home}
-  - {url: "https://www.apper-srl.it/", title: "My Lab"}
+  - {file: "/CV.pdf", title: "CV"}
   - {file: "/Publications", title: "Publications"}
+  - {url: "https://www.apper-srl.it/", title: "My Lab"}
+  
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:ali.karimi@unina.it"}

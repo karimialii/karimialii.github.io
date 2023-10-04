@@ -18,7 +18,7 @@ minimal: true               # use a dark header
 navigation:
   - {file: "CV.md", title: "CV"}
   - {file: "/Publications", title: "Publications"}
-  - {url: "https://www.apper-srl.it/", title: "My Lab"}
+
 
 
 

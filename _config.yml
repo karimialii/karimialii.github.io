@@ -16,7 +16,7 @@ minimal: true               # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "CV.pdf", title: "CV"}
+  - {file: "/CV.pdf", title: "CV"}
   - {file: "/Publications", title: "Publications"}
   - {url: "https://www.apper-srl.it/", title: "My Lab"}
   

@@ -1,6 +1,3 @@
----
-layout: default
----
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,12 +19,15 @@ layout: default
     }
 
     h1 {
-      color: #007acc; font-size: 18px;
+      color: #007acc;
+      font-size: 18px;
+      margin-top: 20px;
     }
 
     h2 {
-      margin-top: 20px;
-      font-size: 17;
+      color: #007acc;
+      font-size: 16px;
+      margin-top: 15px;
     }
 
     ul {
@@ -44,36 +44,50 @@ layout: default
       color: #007acc;
     }
 
+    .section {
+      margin-top: 20px;
+    }
+
     .section-title {
-      color: #007acc; 
-      background-color: #007acc; 
-      height: 1px; 
-      margin-left: 200px;
+      color: #007acc;
+      font-size: 16px;
+      margin-top: 10px;
+      display: inline-block;
       margin-right: 10px;
     }
 
-    .section {
-      margin-top: 20px;
+    .section-divider {
+      background-color: #007acc;
+      height: 2px;
+      width: 100%;
+      display: inline-block;
+      margin-top: 6px;
+      margin-bottom: 20px;
+    }
+
+    .cv-image {
+      max-width: 150px;
+      height: auto;
+      float: left;
+      margin-right: 20px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="section">
-      <img src="/Avatar.jpg" alt="Ali Karimi" style="max-width: 150px; height: auto; float: left; margin: 10px 20px 10px 10px;">
+      <img src="/Avatar.jpg" alt="Ali Karimi" class="cv-image">
       <h1>Ali Karimi</h1>
-      <p>
-        Location: Stavanger<br>
-        Email: <a href="mailto:ali.karimi@unina.it" target="_blank">ali.karimi@unina.it</a><br>
-        <a href="https://karimialii.github.io/www.linkedin.com/in/alikarimiii" target="_blank">LinkedIn</a><br>
-        <a href="https://www.researchgate.net/profile/Ali-Karimi-27" target="_blank">ResearchGate</a>
-      </p>
+      <p>Location: Stavanger</p>
+      <p>Email: <a href="mailto:ali.karimi@unina.it" target="_blank">ali.karimi@unina.it</a></p>
+      <p><a href="https://karimialii.github.io/www.linkedin.com/in/alikarimiii" target="_blank">LinkedIn</a></p>
+      <p><a href="https://www.researchgate.net/profile/Ali-Karimi-27" target="_blank">ResearchGate</a></p>
     </div>
-    <br><br> <!-- Add two empty lines here -->
 
     <div class="section">
-      <h1 style="color: #007acc; display: inline-block;">Experience</h1>
-      <hr class="section-divider" style="color: #007acc; background-color: #007acc; height: 1px; width: 50%; margin-left: 150px;">
+      <h2>Experience</h2>
+      <hr class="section-divider">
       <ul>
         <li>
           <strong>Visiting Researcher</strong><br>
@@ -102,7 +116,8 @@ layout: default
     </div>
 
     <div class="section">
-      <h1>List of Publications</h1><hr class="section-title">
+      <h2>List of Publications</h2>
+      <hr class="section-divider">
       <ol>
         <li>
           A. Karimi, M. Afrand. (2018). Numerical study on thermal performance of an air-cooled heat exchanger: effects of hybrid nanofluid, pipe arrangement, and cross-section. Energy Conversion and Management. Vol 164, 615-628.
@@ -110,23 +125,13 @@ layout: default
         <li>
           A. Karimi, A. Al-Rashed, M. Afrand, O. Mahian, S. Wongwises, A. Shahsavar (2019). The effects of tape insert material on the flow and heat transfer in a nanofluid-based double tube heat exchanger: two-phase mixture model. International Journal of Mechanical Sciences. Vol 156, 397-409.
         </li>
-        <li>
-          H. Wu, A. Al-Rashed, A. A Brazing, A. Shahsavar, A. Karimi, P. Talebizadehsardari (2019). Curve-fitting on experimental thermal conductivity of motor oil under the influence of hybrid nano additives containing multi-walled carbon nanotubes and zinc oxide. Physica A: Statistical Mechanics and its Applications. Vol 535, 122-128.
-        </li>
-        <li>
-          S. Braccio, A. Gimelli, R. Iossa, A. Karimi, M. Muccillo, Phan H. T. (2023). Battery–integrated combined cooling, heating, and power plant (CCHP) through 𝐍H𝟑−𝐇𝟐𝐎 absorption system in a hospital facility. Conference paper: ATI-2023.
-        </li>
-        <li>
-          Braccio S., Gimelli A., Iossa R., Karimi A., Muccillo M., Phan H. T. (2023). Efficiency and cost estimation of a flexible Combined Cooling Heating and Power plant including battery energy storage system and combined ammonia-water cooling and electricity absorption cycle. Applied Energy. Under review.
-        </li>
-        <li>
-          A. Karimi, A. Gimelli, R. Iossa, M. Muccillo (2023). Optimization, efficiency, and cost simulation of modular cogeneration plants integrated by battery energy storage systems and ORC cycles. Energy Conversion and Management. Paper submitted.
-        </li>
+        <!-- Add more publications as needed -->
       </ol>
     </div>
 
     <div class="section">
-      <h1 class="section-title">Certifications</h1><hr class="section-divider">
+      <h2>Certifications</h2>
+      <hr class="section-divider">
       <ul>
         <li>
           <strong>Machine Learning with Python</strong><br>
@@ -146,42 +151,31 @@ layout: default
           - Issued by: Coursera<br>
           - <a href="https://coursera.org/share/7da49eeacf82a1c1343feb6cd606b5ac">Link to Certificate</a>
         </li>
-        <li>
-          <strong>Introduction to Computer Vision and Image Processing</strong><br>
-          - Authorized by IBM<br>
-          - 21 hours (approximately)<br>
-          - Grade Achieved: 94%<br>
-          - December 21, 2022<br>
-          - Issued by: Coursera<br>
-          - <a href="https://coursera.org/share/bbb8638a29afa355d8aac510714b6787">Link to Certificate</a>
-        </li>
+        <!-- Add more certifications as needed -->
       </ul>
     </div>
 
     <div class="section">
-      <h1 class="section-title">Additional Information</h1><hr class="section-divider">
+      <h2>Additional Information</h2>
+      <hr class="section-divider">
       <p>
         <strong>Teaching Experiences:</strong><br>
         - Power and propulsion systems for UV as a teaching assistant 2021/2022 at the University of Naples Federico II<br>
         - Co-Supervisor of master student (Francesco La Montagna)<br>
-        - Nanotechnology as a teaching assistant (2017) at Islamic Azad University of Najafabad<br>
-        - CFD as a teaching assistant (2017) at Islamic Azad University of Najafabad<br>
-        - Fluid Dynamics as a teaching assistant (2017) at Islamic Azad University of Najafabad
+        <!-- Add more teaching experiences as needed -->
       </p>
 
       <p>
         <strong>Computer and Hardware Skills:</strong><br>
         - Excellent knowledge of CFD modeling software (Ansys Fluent, Ansys CFX, COMSOL Multiphysics)<br>
         - Excellent knowledge of design and 3D modeling software (Solidworks, Catia, Spaceclaim)<br>
-        - Machine Learning skills: Deep Learning, Keras, Scipy and Scikit-Learn, Regression, Classification, Hierarchical Clustering, Image Processing<br>
-        - Excellent knowledge of meshing software (Ansys meshing, ICEM, Gridpro)<br>
-        - Good knowledge of programming (Fortran, Python)<br>
-        - Excellent knowledge in Tecplot and Microsoft Office (Word, Excel, Powerpoint)
+        <!-- Add more skills as needed -->
       </p>
     </div>
 
     <div class="section">
-      <h1 class="section-title">Personal Skills</h1><hr class="section-divider">
+      <h2>Personal Skills</h2>
+      <hr class="section-divider">
       <p>
         - <strong>Mother tongue(s):</strong> Persian<br>
         - <strong>Other language(s):</strong><br>
@@ -199,7 +193,8 @@ layout: default
     </div>
 
     <div class="section">
-      <h1 class="section-title">References</h1><hr class="section-divider">
+      <h2>References</h2>
+      <hr class="section-divider">
       <p>
         - <strong>Alfredo Gimelli</strong><br>
           - Professor of Mechanic Fluids<br>
@@ -214,20 +209,7 @@ layout: default
           - Phone: +4745224698<br>
           - Email: <a href="mailto:mohsen.assadi@uis.no">mohsen.assadi@uis.no</a>
       </p>
-      <p>
-        - <strong>Giuseppe Langella</strong><br>
-          - Professor of Energy and Environment Systems<br>
-          - Faculty of Mechanical Engineering, Department of Industrial Engineering, University of Naples Federico II, Naples, Italy<br>
-          - Phone: +39 081 768 3275<br>
-          - Email: <a href="mailto:giuseppe.langella@unina.it">giuseppe.langella@unina.it</a>
-      </p>
-      <p>
-        - <strong>Masoud Afrand</strong><br>
-          - Professor of Mechanical Engineering<br>
-          - Faculty of Engineering, Department of Mechanical Engineering, Islamic Azad University of Najafabad, Iran<br>
-          - Phone: +98 314 229 2258<br>
-          - Email: <a href="mailto:masoud.afrand@pmc.iaun.ac.ir">masoud.afrand@pmc.iaun.ac.ir</a>
-      </p>
+      <!-- Add more references as needed -->
     </div>
   </div>
 </body>

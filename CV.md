@@ -5,7 +5,7 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <img src="/profile.jpg" alt="Ali Karimi" style="max-width: 250px; height: auto;">
+      <img src="/Avatar.jpg" alt="Ali Karimi" style="max-width: 250px; height: auto;">
     </div>
     <div class="col-md-8">
       <h1>CV</h1>

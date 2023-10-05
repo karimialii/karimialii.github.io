@@ -16,7 +16,7 @@ minimal: true               # use a dark header
 # Menu
 
 navigation:
-  - {file: "CV.md", title: "CV"}
+  - {file: "CV.html", title: "CV"}
   - {file: "/Publications", title: "Publications"}
 
 

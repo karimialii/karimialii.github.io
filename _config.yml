@@ -17,7 +17,7 @@ minimal: true               # use a dark header
 
 navigation:
   - {file: "CV.html", title: "CV"}
-  - {file: "/Publications", title: "Publications"}
+  - {file: "/Publications/Publications.html", title: "Publications"}
 
 
 

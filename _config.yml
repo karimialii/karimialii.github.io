@@ -27,7 +27,7 @@ navigation:
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:ali.karimi@unina.it"}
   - {title: Github, icon: github, url: "https://github.com/karimialii"}
-  - {title: LinkedIn, icon: linkedin, url: "www.linkedin.com/in/alikarimiii"}
+  - {title: LinkedIn, icon: linkedin, url: "https://linkedin.com/in/alikarimiii"}
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/

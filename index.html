@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ali Karimi's Tech-Driven Portfolio">
+    <title>Ali Karimi | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Ali Karimi</h1>
+            <p>Engineer | Innovator | Creator</p>
+
+            <!-- Links under Header -->
+            <div class="header-links">
+                <a href="/cv/cv.html">CV</a>
+                <a href="/projects/projects.html">Projects</a>
+                <a href="/blog/blog.html">Blog</a>
+                <a href="/publications/publications.html">Publications</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a mechanical engineer specializing in thermal management, CFD simulations, and cutting-edge research. My work focuses on creating efficient, sustainable, and innovative solutions to real-world challenges.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1: Hydrogen Storage System</h3>
+                <p>Developed a hydrogen storage and distribution system for renewable energy integration, optimizing cost and emissions by 20%.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: MES Optimization</h3>
+                <p>Designed a multi-energy system with real-time optimization for cost-effective energy management in smart grids.</p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <article class="blog-post">
+                <h3>Understanding Hydrogen Storage</h3>
+                <p>A deep dive into hydrogen as a sustainable energy storage solution.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h3>CFD Simulations Simplified</h3>
+                <p>Tips and tools for efficient CFD simulations.</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Ali Karimi | All Rights Reserved</p>
+
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle">Switch to Light Mode</button>
+
+    </footer>
+ 
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

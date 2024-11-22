@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ali Karimi's Blog">
+    <title>Blog - Ali Karimi</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link local styles -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/blog/blog.html">Blog</a></li>
+            <li><a href="/publications/publications.html">Publications</a></li>
+            <li><a href="/projects/projects.html">Projects</a></li>
+            <li><a href="/cv/cv.html">CV</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Blog</h2>
+        
+        <!-- Blog Post 1 -->
+        <section class="blog-post">
+            <h3>Understanding Hydrogen Storage</h3>
+            <p class="post-date">Posted on: November 20, 2024</p>
+            <p>A deep dive into hydrogen as a sustainable energy storage solution. This post explores the potential and challenges of hydrogen storage in the energy transition...</p>
+
+            <div class="comments-section">
+                <h4>Comments</h4>
+                <ul class="comments-list" id="comments-1">
+                    <!-- Comments will be dynamically added here -->
+                </ul>
+                <textarea id="comment-input-1" class="comment-input" placeholder="Write your comment here..."></textarea>
+                <button class="comment-button" onclick="addComment(1)">Post Comment</button>
+            </div>
+        </section>
+
+        <!-- Blog Post 2 -->
+        <section class="blog-post">
+            <h3>CFD Simulations Simplified</h3>
+            <p class="post-date">Posted on: November 18, 2024</p>
+            <p>Tips and tools for efficient CFD simulations. This post covers the basics of setting up simulations and best practices for achieving accurate results...</p>
+
+            <div class="comments-section">
+                <h4>Comments</h4>
+                <ul class="comments-list" id="comments-2">
+                    <!-- Comments will be dynamically added here -->
+                </ul>
+                <textarea id="comment-input-2" class="comment-input" placeholder="Write your comment here..."></textarea>
+                <button class="comment-button" onclick="addComment(2)">Post Comment</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #00ffcc, #0099ff);
+    color: #121212;
+    animation: header-glow 3s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes header-glow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+    to {
+        text-shadow: 0 0 20px #0099ff, 0 0 30px #0099ff, 0 0 40px #0099ff;
+    }
+}
+
+main {
+    padding: 50px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #00ffcc;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Project and Blog Cards */
+.project-card, .blog-post {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 255, 204, 0.7);
+}
+
+.blog-post h3 {
+    color: #00ffcc;
+}
+
+.blog-post a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00ffcc;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #00ffcc;
+    border-radius: 4px;
+    background: #121212;
+    color: #f5f5f5;
+}
+
+form button {
+    background: #00ffcc;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #0099ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    border-top: 2px solid #00ffcc;
+}
+
+/* Dark Mode */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #121212;
+}
+
+body.light-mode header {
+    background: linear-gradient(135deg, #0099ff, #00ffcc);
+}
+
+body.light-mode .project-card, body.light-mode .blog-post {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode footer {
+    background-color: #f5f5f5;
+}

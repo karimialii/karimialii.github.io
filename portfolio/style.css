@@ -7,15 +7,15 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #121212; /* Dark background */
-    color: #f5f5f5; /* Light text */
+    background-color: #121212;
+    color: #f5f5f5;
     line-height: 1.6;
     padding: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav {
-    background-color: #1e1e1e; /* Dark navigation bar */
+    background-color: #1e1e1e;
     padding: 10px 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -40,14 +40,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00ffcc; /* Highlight color on hover */
+    color: #00ffcc;
 }
 
 main {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1e1e1e; /* Dark background for main content */
+    background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -62,50 +62,100 @@ h2 {
     display: inline-block;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #2b2b2b; /* Slightly lighter than the main background */
+.portfolio-item {
+    margin-bottom: 30px;
     padding: 15px;
+    background-color: #2b2b2b;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 255, 204, 0.7);
-}
-
-.project-card h3 {
+.portfolio-item h3 {
     font-size: 1.5rem;
     color: #00ffcc;
     margin-bottom: 10px;
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: #f5f5f5;
-    line-height: 1.6;
+.post-date {
+    font-size: 0.9rem;
+    color: #bbb;
     margin-bottom: 10px;
 }
 
-.project-card a {
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 255, 204, 0.7);
+}
+
+.comments-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+
+.comments-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     color: #00ffcc;
-    text-decoration: none;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.comments-list li {
+    background-color: #333;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #f5f5f5;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #00ffcc;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    resize: none;
+}
+
+.comment-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-card a:hover {
-    color: #0099ff;
+.comment-button:hover {
+    background-color: #0099ff;
+    color: #f5f5f5;
 }
 
-/* Footer Styling */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -113,40 +163,4 @@ footer {
     color: #f5f5f5;
     padding: 10px 0;
     border-top: 2px solid #00ffcc;
-}
-
-/* Dark Mode Styling */
-body.light-mode {
-    background-color: #f5f5f5;
-    color: #121212;
-}
-
-body.light-mode nav {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode main {
-    background-color: #ffffff;
-    color: #121212;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .project-card {
-    background-color: #f0f0f0;
-    color: #121212;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode h2 {
-    color: #007acc;
-    border-bottom: 2px solid #007acc;
-}
-
-body.light-mode .project-card a {
-    color: #007acc;
-}
-
-body.light-mode .project-card a:hover {
-    color: #005b99;
 }

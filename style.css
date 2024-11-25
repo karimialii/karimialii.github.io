@@ -145,20 +145,25 @@ body.light-mode footer {
 
 #find-me-online {
     text-align: center;
-    margin: 40px 0;
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+#find-me-online .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spacing between icons */
 }
 
 #find-me-online .social-icons a {
     display: inline-block;
-    margin: 0 10px;
 }
 
 #find-me-online .social-icons img {
-    width: 40px;
-    height: 40px;
+    width: 24px; /* Smaller icon size */
+    height: 24px;
     transition: transform 0.3s ease;
 }
 
 #find-me-online .social-icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1); /* Subtle hover effect */
 }

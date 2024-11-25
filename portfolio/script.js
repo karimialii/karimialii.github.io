@@ -20,3 +20,16 @@ function addComment(itemId) {
         inputField.value = '';
     }
 }
+
+// Popup Functions
+function openPopup(imageSrc) {
+    const popup = document.getElementById("image-popup");
+    const popupImg = document.getElementById("popup-img");
+    popup.style.display = "flex"; // Show the popup
+    popupImg.src = imageSrc; // Set the image source
+}
+
+function closePopup() {
+    const popup = document.getElementById("image-popup");
+    popup.style.display = "none"; // Hide the popup
+}

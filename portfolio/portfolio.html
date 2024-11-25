@@ -20,6 +20,103 @@
     </nav>
     <main>
         <h2>Portfolio</h2>
+
+        <section class="portfolio-item">
+            <h3>Digital Twin of Ansaldo T100 Micro Gas Turbine</h3>
+            <p class="post-date">Developed with: Python</p>
+            <p>
+                This digital twin application simulates the operation of the Ansaldo T100 Micro Gas Turbine. It provides two modes of operation: single-operation mode and dynamic simulation mode.
+            </p>
+            <ul>
+                <li><strong>Single-Operation Mode:</strong> Allows users to set ambient conditions, desired power, and maximum error. Outputs include operational data for each point and maps for the compressor and turbine.</li>
+                <li><strong>Dynamic Simulation Mode:</strong> Real-time operation tracking, including fuel flow rate, efficiency, and power output. Users can change the power setpoint online and observe changes in real-time.</li>
+            </ul>
+            
+            <h4>Equations for Single Operation</h4>
+            <p>
+                In single-operation mode, the performance of the micro gas turbine is calculated using the following thermodynamic and aerodynamic equations:
+            </p>
+
+            <ol>
+                <li><strong>Power Output (P):</strong> The net power output of the turbine is calculated using:
+                    <pre>
+                        P = η_mech × (m_gas × Cp_gas × (T_turbine_in - T_turbine_out))
+                    </pre>
+                    Where:
+                    <ul>
+                        <li><strong>η_mech:</strong> Mechanical efficiency of the turbine.</li>
+                        <li><strong>m_gas:</strong> Mass flow rate of the working gas.</li>
+                        <li><strong>Cp_gas:</strong> Specific heat capacity of the working gas.</li>
+                        <li><strong>T_turbine_in:</strong> Turbine inlet temperature.</li>
+                        <li><strong>T_turbine_out:</strong> Turbine outlet temperature.</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Compressor Work (W_compressor):</strong> The work required to compress the incoming air is calculated as:
+                    <pre>
+                        W_compressor = m_air × Cp_air × (T_compressor_out - T_compressor_in)
+                    </pre>
+                    Where:
+                    <ul>
+                        <li><strong>m_air:</strong> Mass flow rate of air.</li>
+                        <li><strong>Cp_air:</strong> Specific heat capacity of air.</li>
+                        <li><strong>T_compressor_out:</strong> Compressor outlet temperature.</li>
+                        <li><strong>T_compressor_in:</strong> Compressor inlet temperature.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Fuel Flow Rate (ṁ_fuel):</strong> The fuel flow rate is derived from the energy balance:
+                    <pre>
+                        ṁ_fuel = P / (η_combustion × LHV)
+                    </pre>
+                    Where:
+                    <ul>
+                        <li><strong>η_combustion:</strong> Combustion efficiency.</li>
+                        <li><strong>LHV:</strong> Lower heating value of the fuel.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Thermal Efficiency (η_thermal):</strong> The thermal efficiency of the turbine is calculated as:
+                    <pre>
+                        η_thermal = P / (ṁ_fuel × LHV)
+                    </pre>
+                </li>
+
+                <li><strong>Mass Flow Balance:</strong> Ensures mass conservation in the turbine:
+                    <pre>
+                        m_total = m_air + ṁ_fuel
+                    </pre>
+                </li>
+            </ol>
+
+            <h4>Key Outputs</h4>
+            <p>The following data is calculated for each operational point:</p>
+            <ul>
+                <li>Compressor and turbine maps, including pressure ratio and efficiency curves.</li>
+                <li>Power output and thermal efficiency.</li>
+                <li>Fuel flow rate and combustion parameters.</li>
+            </ul>
+            
+            <div class="image-gallery">
+                <img src="PF5/1.jpg" alt="Signle Operation" onclick="openPopup('PF1=5/1.jpg')">
+                <img src="PF5/2.jpg" alt="Calculations" onclick="openPopup('PF5/2.jpg')">
+                <img src="PF5/3.jpg" alt="Results" onclick="openPopup('PF5/3.jpg')">
+                <img src="PF5/4.jpg" alt="Dynamic Simulation" onclick="openPopup('PF5/4.jpg')">
+            </div>
+
+            <div class="download-section">
+                <p>Download the Python application: <a href="PF5/DigitalTwin_T100.zip" download>DigitalTwin_T100.zip</a></p>
+            </div>
+            <div class="comments-section">
+                <h4>Comments</h4>
+                <ul class="comments-list" id="comments-digital-twin">
+                    <!-- Comments will be dynamically added here -->
+                </ul>
+                <textarea id="comment-input-digital-twin" class="comment-input" placeholder="Write your comment here..."></textarea>
+                <button class="comment-button" onclick="addComment('digital-twin')">Post Comment</button>
+            </div>
+        </section>
+
         <section class="portfolio-item">
             <h3>MacBook Pro 16-Inch Concept</h3>
             <p class="post-date">Created in: SolidWorks | Rendered with: SolidWorks Visualize</p>
@@ -122,7 +219,7 @@
                 <button class="comment-button" onclick="addComment('macbook-x')">Post Comment</button>
             </div>
         </section>
-        
+
     </main>
     <footer>
         <p>© 2024 Ali Karimi | All Rights Reserved</p>

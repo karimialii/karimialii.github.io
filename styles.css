@@ -1,0 +1,190 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000; /* Set background color to black */
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #111;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto; /* Push the links and hamburger to the far right */
+}
+
+/* Navigation Menu */
+#nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+#nav-menu li a:hover {
+    color: #1e90ff;
+}
+
+.buy-now {
+    background-color: #ff3366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #ff6699;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 20px; /* Add spacing between the last link and hamburger */
+}
+
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Align hamburger and links in one row */
+        align-items: center;
+    }
+
+    #nav-menu {
+        display: none; /* Hide links initially */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        flex-direction: column;
+        background-color: #111;
+        padding: 10px;
+        width: 200px;
+    }
+
+    #nav-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger on mobile screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Custom Styles for the Provided Image */
+.highlight {
+    color: #ff3366;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    max-width: 60%;
+}
+
+.image-content {
+    max-width: 35%;
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 10px;
+    background: transparent; /* Ensure the background is transparent */
+    mask-image: url('Artboard 1.png'); /* Use the image itself as a mask */
+    mask-size: cover; /* Ensure the mask covers the entire image */
+    -webkit-mask-image: url('Artboard 1.png'); /* For WebKit browsers */
+    -webkit-mask-size: cover; /* Ensure the mask covers the entire image */
+}

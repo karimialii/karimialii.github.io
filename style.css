@@ -213,10 +213,6 @@ p {
     width: 100%;
     border-radius: 10px;
     background: transparent; /* Ensure the background is transparent */
-    mask-image: url('Artboard 1.png'); /* Use the image itself as a mask */
-    mask-size: cover; /* Ensure the mask covers the entire image */
-    -webkit-mask-image: url('Artboard 1.png'); /* For WebKit browsers */
-    -webkit-mask-size: cover; /* Ensure the mask covers the entire image */
 }
 
 /* Section Styles */
@@ -292,7 +288,7 @@ button:hover {
     position: relative;
     border-radius: 20px;
     margin: 50px 20px; /* Add margin to top and bottom */
-    border: 1px solid #777; /* Add white border */
+    border: 1px solid #999; /* Add white border */
 }
 
 .header-info {
@@ -319,7 +315,7 @@ button:hover {
     height: 300px; /* Adjust height as needed */
     margin-top: auto;
     margin-bottom: 40px;
-    border: 1px solid #00ff9d;
+    border: 1px solid #999;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
     overflow: hidden;
@@ -353,7 +349,7 @@ button:hover {
  
 .contact-info .copyright {
     font-size: 12px;
-    color: #777;
+    color: #999;
     margin-top: 20px;
 }
 
@@ -629,7 +625,7 @@ button:hover {
 .intro-text {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: #777;
+    color: #999;
     text-align: left;
 }
 
@@ -674,17 +670,23 @@ button:hover {
     font-size: 20px; /* Icon size */
 }
 
-.right-nav a:hover {
-    background-color: transparent; /* remove background on hover */
-    color: #00ff9d;
-}
-
 .right-nav a.active {
-    background-color: transparent; /* Remove background on active */
+    color: #00ff9d; /* Change to highlight color */
 }
 
 .right-nav a.active i {
-    color: #00ff9d; /* Active icon color */
+    color: #00ff9d; /* Change icon color */
+}
+
+
+
+/* Ensure hover state does not override active state */
+.right-nav a:hover:not(.active) {
+    color: #00ff9d;
+}
+
+.right-nav a:hover:not(.active) i {
+    color: #00ff9d;
 }
 
 .right-nav a.active::after {
@@ -708,12 +710,12 @@ button:hover {
 }
 
 .section-title i {
-    color: #777;
+    color: #999;
     font-size: 10px;
 }
 
 .section-title span {
-    color: #777;
+    color: #999;
     font-size: 10px;
     font-weight: 500;
 }
@@ -738,7 +740,7 @@ button:hover {
 
 .stat-label {
     font-size: 1rem;
-    color: #777;
+    color: #999;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -777,7 +779,7 @@ button:hover {
 .about p {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: #777;
+    color: #999;
     text-align: left;
 }
 
@@ -845,7 +847,7 @@ button:hover {
 }
 
 .skills .skill-card {
-    background-color: #333;
+    background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -911,7 +913,7 @@ button:hover {
 
 .projects .project-card {
     background-color: #1a1a1a;
-    border: 1px solid #777;
+    border: 1px solid #999;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -990,7 +992,7 @@ button:hover {
 
 .portfolio .portfolio-card {
     background-color: #1a1a1a;
-    border: 1px solid #777;
+    border: 1px solid #999;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1064,7 +1066,7 @@ button:hover {
 
 .publications .publication-card {
     background-color: #1a1a1a;
-    border: 1px solid #777;
+    border: 1px solid #999;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

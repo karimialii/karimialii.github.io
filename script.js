@@ -1,15 +1,9 @@
-const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
-
-// Scroll-triggered animations
 const sections = document.querySelectorAll('section');
-const otherSections = document.querySelector('.other-sections');
+const navLinks = document.querySelectorAll('.right-nav a');
 
-const options = {
+// Intersection Observer for animations
+const observerOptions = {
     threshold: 0.2,
     rootMargin: '-50px'
 };
@@ -20,57 +14,47 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.2 });
+}, observerOptions);
 
 sections.forEach(section => observer.observe(section));
 
+// Debugging: Log all sections in the console
+console.log("All sections on the page:", sections);
+sections.forEach(section => {
+    console.log("Section ID:", section.id);
+});
 
 // Active link highlighting on scroll
-const navLinks = document.querySelectorAll('.right-nav a');
-
-// Section title switching
-const sectionTitles = {
-    'home': document.getElementById('homeTitle'),
-    'about': document.getElementById('aboutTitle')
-};
-
 window.addEventListener('scroll', () => {
-    let current = '';
+    let currentSection = '';
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        const scrollPosition = window.scrollY;
-        
-        if (scrollPosition >= (sectionTop - 100)) { 
-            current = section.getAttribute('id');
+        const scrollPosition = window.scrollY + window.innerHeight / 3; // Adjusted offset
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
         }
     });
 
-    // Update navigation links
+    console.log("Current active section:", currentSection); // Debugging
+
+    // Update navigation links' active state
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
+        if (link.getAttribute('href').substring(1) === currentSection) {
             link.classList.add('active');
         }
     });
-
-    // Update section titles
-    Object.keys(sectionTitles).forEach(section => {
-        if (section === current) {
-            sectionTitles[section].style.display = 'flex';
-        } else {
-            sectionTitles[section].style.display = 'none';
-        }
-    });
 });
 
+// Smooth scrolling for navigation links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = link.getAttribute('href').slice(1);
+        const targetId = link.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         targetSection.scrollIntoView({ behavior: "smooth" });
-
     });
 });
-

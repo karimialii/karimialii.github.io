@@ -1,53 +1,76 @@
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-// Animate Header Text
-gsap.fromTo(
-    "header h1",
-    { y: -50, opacity: 0 }, // Initial state
-    { y: 0, opacity: 1, duration: 1, delay: 0.5 } // Final state
-);
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
 
-gsap.fromTo(
-    "header p",
-    { y: 50, opacity: 0 }, // Initial state
-    { y: 0, opacity: 1, duration: 1, delay: 1 } // Final state
-);
+// Scroll-triggered animations
+const sections = document.querySelectorAll('section');
+const otherSections = document.querySelector('.other-sections');
 
-// Animate Links under Header
-gsap.fromTo(
-    "header .header-links a",
-    { y: 50, opacity: 0 }, // Initial state (reduce y for better visibility)
-    { y: 0, opacity: 1, duration: 1, delay: 1.5 } // Staggered animation
-);
+const options = {
+    threshold: 0.2,
+    rootMargin: '-50px'
+};
 
-// Section animations on scroll
-document.querySelectorAll("section").forEach((section) => {
-    gsap.fromTo(
-        section,
-        { y: 0, opacity: 0 }, // Initial state
-        {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            scrollTrigger: {
-                trigger: section,
-                start: "top 80%", // Start animation when the section enters the viewport
-                end: "top 60%", // End animation when the section moves higher
-                scrub: 0.5, // Smooth animation on scroll
-            },
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
         }
-    );
+    });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+
+// Active link highlighting on scroll
+const navLinks = document.querySelectorAll('.right-nav a');
+
+// Section title switching
+const sectionTitles = {
+    'home': document.getElementById('homeTitle'),
+    'about': document.getElementById('aboutTitle')
+};
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition >= (sectionTop - 100)) { 
+            current = section.getAttribute('id');
+        }
+    });
+
+    // Update navigation links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+
+    // Update section titles
+    Object.keys(sectionTitles).forEach(section => {
+        if (section === current) {
+            sectionTitles[section].style.display = 'flex';
+        } else {
+            sectionTitles[section].style.display = 'none';
+        }
+    });
 });
 
-// Dark Mode Toggle
-const toggleButton = document.getElementById("dark-mode-toggle");
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: "smooth" });
 
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    // Update button text
-    toggleButton.textContent = document.body.classList.contains("light-mode")
-        ? "Switch to Dark Mode"
-        : "Switch to Light Mode";
+    });
 });
+

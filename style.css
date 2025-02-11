@@ -596,7 +596,7 @@ button:hover {
 }
 
 .home {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: flex-start; /* Change from center to flex-start */
     justify-content: flex-start; /* Change from center to flex-start */
@@ -751,7 +751,7 @@ button:hover {
 
 /* Add styles for the About section */
 .about {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;

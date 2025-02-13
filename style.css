@@ -25,7 +25,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
 /* Navigation Bar */
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 1rem 0;
     background-color: #111;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s ease;
@@ -49,13 +49,13 @@ body {
 .logo-title {
     display: flex;
     align-items: center;
-    height: 50px; /* Match the logo height */
+    height: 3.125rem; /* Match the logo height */
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 0.625rem;
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
@@ -68,10 +68,10 @@ body {
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: bold;
-    line-height: 50px; /* Match the logo height */
+    line-height: 3.125rem; /* Match the logo height */
     display: flex;
     align-items: center;
-    margin-top: 15px; /* Adjust this value to control the vertical distance */
+    margin-top: 1rem; /* Adjust this value to control the vertical distance */
 }
 
 .nav-links {
@@ -79,15 +79,15 @@ body {
     align-items: center;
     position: relative;
     margin-left: auto; /* Push the links and hamburger to the far right */
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 /* Navigation Menu */
 #nav-menu {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     list-style: none;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 #nav-menu li a {
@@ -103,8 +103,8 @@ body {
 
 .buy-now {
     background-color: #ff3366;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -121,7 +121,7 @@ body {
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
-    margin-left: 20px; /* Add spacing between the last link and hamburger */
+    margin-left: 1.25rem; /* Add spacing between the last link and hamburger */
 }
 
 /* Media Query for Mobile Screens */
@@ -136,14 +136,14 @@ body {
     #nav-menu {
         display: none; /* Hide links initially */
         position: absolute;
-        top: 60px;
+        top: 3.75rem;
         right: 0;
         flex-direction: column;
         background-color: #111;
-        padding: 20px;
-        width: 200px;
-        border-radius: 5px;
-        gap: 15px;
+        padding: 1.25rem;
+        width: 12.5rem;
+        border-radius: 0.3125rem;
+        gap: 0.9375rem;
         margin-right: 0;
     }
 
@@ -175,7 +175,7 @@ section {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     animation: none;
 }
 
@@ -186,13 +186,13 @@ h2 {
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .main-content {
@@ -211,13 +211,13 @@ p {
 
 .profile-image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background: transparent; /* Ensure the background is transparent */
 }
 
 /* Section Styles */
 section {
-    padding: 60px 0;
+    padding: 3.75rem 0;
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
@@ -237,14 +237,14 @@ section.visible {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     animation: none;
 }
 
 p, ul {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 ul {
@@ -253,16 +253,16 @@ ul {
 }
 
 ul li {
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 /* Button Styles */
 button {
     background-color: #ff3366;
     color: #fff;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -273,7 +273,7 @@ button:hover {
 
 /* Layout Styles */
 .left-panel, .right-panel {
-    padding: 20px;
+    padding: 1.25rem;
     overflow-y: auto;
 }
 
@@ -284,41 +284,44 @@ button:hover {
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 60px 55px;
+    padding: 3.75rem 3.4375rem;
     position: relative;
-    border-radius: 20px;
-    margin: 50px 20px; /* Add margin to top and bottom */
-    border: 1px solid #999; /* Add white border */
+    border-radius: 1.25rem;
+    margin: 3.125rem 1.25rem; /* Add margin to top and bottom */
+    border: 0.0625rem solid #999; /* Add white border */
+    min-width: 15rem; /* Minimum width */
 }
 
 .header-info {
     display: flex;
     align-items: baseline;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 0.9375rem;
+    margin-bottom: 1.875rem;
 }
 
 .header-info h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin: 0;
 }
 
 .header-info span {
-    font-size: 15px;
-    margin-left: 50px;
+    font-size: 0.9375rem;
+    margin-left: 3.125rem;
     color: #999;
     font-weight: normal;
 }
 
 .profile-picture-container {
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 18.75rem; /* Adjust height as needed */
     margin-top: auto;
-    margin-bottom: 40px;
-    border: 1px solid #999;
-    border-radius: 25px;
-    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+    margin-bottom: 2.5rem;
+    border: 0.0625rem solid #999;
+    border-radius: 1.5625rem;
+    box-shadow: 0 0 1.25rem rgba(0, 255, 157, 0.2);
     overflow: hidden;
+    min-width: 10rem; /* Minimum width */
+    min-height: 10rem; /* Minimum height */
 }
 
 .profile-picture {
@@ -330,7 +333,7 @@ button:hover {
 }
 
 .contact-info {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: center; /* Center the content */
 }
 
@@ -338,8 +341,8 @@ button:hover {
     display: block; /* Change to block to center text */
     text-align: center; /* Center the text */
     gap: 0; /* Remove gap */
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 0.625rem 0;
+    font-size: 1.125rem;
     color: #fff;
 }
 
@@ -348,9 +351,9 @@ button:hover {
 }
  
 .contact-info .copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #999;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 /* Remove skills section styles */
@@ -367,21 +370,21 @@ button:hover {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    margin-bottom: 30px; /* Add margin after social icons */
+    gap: 0.9375rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.875rem; /* Add margin after social icons */
 }
 
 .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     background-color: #555;
     color: #555;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -395,47 +398,47 @@ button:hover {
 .hire-me-button {
     background: #00ff9d;
     color: #1a1a1a;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
+    padding: 0.9375rem 1.875rem;
+    border-radius: 1.875rem;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center; /* Center the content horizontally */
-    gap: 10px;
-    margin-bottom: 30px; /* Add margin before download CV button */
+    gap: 0.625rem;
+    margin-bottom: 1.875rem; /* Add margin before download CV button */
 }
 
 .hire-me-button i {
-    margin-right: 5px; /* Add spacing between icon and text */
+    margin-right: 0.3125rem; /* Add spacing between icon and text */
 }
 
 .hire-me-button:hover {
     background: #33ffa7;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 255, 157, 0.3);
 }
 
 /* Social Media Icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 0.9375rem;
+    margin-top: 1.25rem;
 }
 
 .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     background-color: #333;
     color: #555;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -449,20 +452,20 @@ button:hover {
 .profile-info {
     text-align: center;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .profile-info h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 0.625rem 0;
     color: #fff;
 }
 
 .profile-info a {
     color: #00ff9d;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -472,14 +475,14 @@ button:hover {
 
 .profile-details {
     width: 100%;
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 0 1.25rem;
+    margin-top: 1.25rem;
 }
 
 .profile-details p {
-    margin: 15px 0;
+    margin: 0.9375rem 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: flex;
     justify-content: space-between;
 }
@@ -491,15 +494,15 @@ button:hover {
 /* Skills section */
 .skills {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
 }
 
 .skills-content {
@@ -510,7 +513,7 @@ button:hover {
 
 .skills h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -522,26 +525,26 @@ button:hover {
 
 .skills .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
 }
 
 .skills .skill-card {
     background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .skills .skill-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: #00ff9d;
 }
 
@@ -549,42 +552,42 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 /* Download button */
 .download-cv {
     background: #00ff9d;
     color: #1a1a1a;
-    padding: 15px 30px;
-    border-radius: 30px;
+    padding: 0.9375rem 1.875rem;
+    border-radius: 1.875rem;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 30px;
+    margin-top: 1.875rem;
     text-transform: uppercase;
 }
 
 .download-cv:hover {
     background: #33ffa7;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 255, 157, 0.3);
 }
 
 .download-cv i {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .right-panel {
     width: 70%;
     background-color: #1a1a1a;
     color: #fff;
-    padding: 150px;
+    padding: 9.375rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -600,8 +603,8 @@ button:hover {
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px; /* Add padding from top */
-    padding-left: 50px; /* Add padding from left */
+    padding-top: 3.125rem; /* Add padding from top */
+    padding-left: 3.125rem; /* Add padding from left */
 }
 
 .home-content {
@@ -612,7 +615,7 @@ button:hover {
 
 .home h2 {
     font-size: 3.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -634,15 +637,15 @@ button:hover {
     position: fixed; /* Changed to fixed */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for centering */
-    right: 100px;
-    width: 40px; /* Reduced width for icon-based nav */
-    padding: 20px 10px; /* Adjusted padding */
-    border-radius: 20px; /* Pill-shaped */
+    right: 6.25rem;
+    width: 2.5rem; /* Reduced width for icon-based nav */
+    padding: 1.25rem 0.625rem; /* Adjusted padding */
+    border-radius: 1.25rem; /* Pill-shaped */
     background-color: #1a1a1a; /* Dark background */
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #555; /* Add border color */
+    border: 0.0625rem solid #555; /* Add border color */
 }
 
 .right-nav ul {
@@ -652,7 +655,7 @@ button:hover {
 }
 
 .right-nav li {
-    margin-bottom: 20px; /* Increased spacing */
+    margin-bottom: 1.25rem; /* Increased spacing */
 }
 
 .right-nav a {
@@ -661,13 +664,13 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 50%; /* Circular icons */
     transition: background-color 0.3s ease;
 }
 
 .right-nav i {
-    font-size: 20px; /* Icon size */
+    font-size: 1.25rem; /* Icon size */
 }
 
 .right-nav a.active {
@@ -677,8 +680,6 @@ button:hover {
 .right-nav a.active i {
     color: #00ff9d; /* Change icon color */
 }
-
-
 
 /* Ensure hover state does not override active state */
 .right-nav a:hover:not(.active) {
@@ -754,8 +755,8 @@ button:hover {
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
 }
 
 .about-content {
@@ -766,7 +767,7 @@ button:hover {
 
 .about h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -787,15 +788,15 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .about .detail-item {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 600px;
-    margin: 10px 0;
+    max-width: 37.5rem;
+    margin: 0.625rem 0;
 }
 
 .about .detail-label {
@@ -810,15 +811,15 @@ button:hover {
 /* Add styles for the Skills section */
 .skills {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
 }
 
 .skills-content {
@@ -829,7 +830,7 @@ button:hover {
 
 .skills h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -841,27 +842,27 @@ button:hover {
 
 .skills .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding-left: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+    padding-left: 6.25rem;
 }
 
 .skills .skill-card {
     background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .skills .skill-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: #00ff9d;
 }
 
@@ -869,21 +870,21 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 /* Add styles for the Projects section to use a grid layout */
 .projects {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
 }
 
 .projects-content {
@@ -894,7 +895,7 @@ button:hover {
 
 .projects h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -906,28 +907,28 @@ button:hover {
 
 .projects .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding-left: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+    padding-left: 6.25rem;
 }
 
 .projects .project-card {
     background-color: #1a1a1a;
-    border: 1px solid #999;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0.0625rem solid #999;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .projects .project-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: #00ff9d;
 }
 
@@ -935,7 +936,7 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .projects .project-card a {
@@ -951,15 +952,15 @@ button:hover {
 /* Portfolio section */
 .portfolio {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
     flex-direction: column;
 }
 
@@ -971,7 +972,7 @@ button:hover {
 
 .portfolio h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -985,35 +986,35 @@ button:hover {
 .portfolio .portfolio-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     width: 100%;
-    padding-left: 100px;
+    padding-left: 6.25rem;
 }
 
 .portfolio .portfolio-card {
     background-color: #1a1a1a;
-    border: 1px solid #999;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0.0625rem solid #999;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 }
 
 .portfolio .portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .portfolio .portfolio-card img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 0.625rem;
+    margin-bottom: 0.9375rem;
 }
 
 .portfolio .portfolio-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: #00ff9d;
 }
 
@@ -1021,21 +1022,21 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 /* Add styles for the Publications section to use a grid layout */
 .publications {
     min-height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     opacity: 1;
     transform: none;
     background-color: #1a1a1a;
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
 }
 
 .publications-content {
@@ -1046,7 +1047,7 @@ button:hover {
 
 .publications h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     text-align: left;
     font-weight: 300;
 }
@@ -1059,29 +1060,29 @@ button:hover {
 .publications .publications-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     width: 100%;
-    padding-left: 100px;
+    padding-left: 6.25rem;
 }
 
 .publications .publication-card {
     background-color: #1a1a1a;
-    border: 1px solid #999;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0.0625rem solid #999;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 }
 
 .publications .publication-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .publications .publication-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     color: #00ff9d;
 }
 
@@ -1089,7 +1090,7 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .publications .publication-card a {

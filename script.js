@@ -18,11 +18,11 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => observer.observe(section));
 
-// Debugging: Log all sections in the console
-console.log("All sections on the page:", sections);
-sections.forEach(section => {
-    console.log("Section ID:", section.id);
-});
+// // Debugging: Log all sections in the console
+// console.log("All sections on the page:", sections);
+// sections.forEach(section => {
+//     console.log("Section ID:", section.id);
+// });
 
 // Active link highlighting on scroll
 window.addEventListener('scroll', () => {

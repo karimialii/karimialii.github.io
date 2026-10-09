@@ -1,60 +1,25 @@
-const navMenu = document.getElementById("nav-menu");
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.right-nav a');
+const reveals = document.querySelectorAll('.reveal');
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.top nav a');
 
-// Intersection Observer for animations
-const observerOptions = {
-    threshold: 0.2,
-    rootMargin: '-50px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-sections.forEach(section => observer.observe(section));
+reveals.forEach((el) => revealObserver.observe(el));
 
-// // Debugging: Log all sections in the console
-// console.log("All sections on the page:", sections);
-// sections.forEach(section => {
-//     console.log("Section ID:", section.id);
-// });
-
-// Active link highlighting on scroll
-window.addEventListener('scroll', () => {
-    let currentSection = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 3; // Adjusted offset
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
-        }
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
     });
+}, { rootMargin: '-40% 0px -55% 0px' });
 
-    console.log("Current active section:", currentSection); // Debugging
-
-    // Update navigation links' active state
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === currentSection) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Smooth scrolling for navigation links
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: "smooth" });
-    });
-});
+sections.forEach((section) => navObserver.observe(section));

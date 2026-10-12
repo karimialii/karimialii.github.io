@@ -5,7 +5,7 @@
     const $ = (s, c = document) => c.querySelector(s);
     const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
-    /* Theme toggle */
+    /* Theme toggle: light paper and blueprint */
     $('.theme-toggle').addEventListener('click', () => {
         const dark = root.dataset.theme
             ? root.dataset.theme === 'dark'
@@ -15,13 +15,8 @@
         try { localStorage.setItem('theme', next); } catch (e) {}
     });
 
-    /* Ticker: duplicate the list for a seamless loop */
-    const track = $('.track');
-    if (track) track.appendChild(track.firstElementChild.cloneNode(true)).setAttribute('aria-hidden', 'true');
-
-    /* Pointer-driven effects share one rAF-throttled handler */
+    /* Pointer effects share one rAF-throttled handler: grid highlight and card spotlight */
     let px = 0, py = 0, pending = false, target = null;
-    const glow = $('.glow');
     const onMove = (e) => {
         px = e.clientX; py = e.clientY; target = e.target;
         if (pending) return;
@@ -39,7 +34,6 @@
         });
     };
     if (finePointer && !reduce) document.addEventListener('pointermove', onMove, { passive: true });
-    else if (glow) glow.style.opacity = '0.6';
 
     /* Magnetic buttons */
     if (finePointer && !reduce) {
@@ -54,23 +48,32 @@
                 el.style.setProperty('--my-btn', '0px');
             });
         });
-
-        /* Portrait tilt */
-        const tilt = $('[data-tilt]');
-        if (tilt) {
-            tilt.addEventListener('pointermove', (e) => {
-                const r = tilt.getBoundingClientRect();
-                const x = (e.clientX - r.left) / r.width - 0.5;
-                const y = (e.clientY - r.top) / r.height - 0.5;
-                tilt.style.setProperty('--ty', (x * 8).toFixed(2) + 'deg');
-                tilt.style.setProperty('--tx', (-y * 8).toFixed(2) + 'deg');
-            });
-            tilt.addEventListener('pointerleave', () => {
-                tilt.style.setProperty('--tx', '0deg');
-                tilt.style.setProperty('--ty', '0deg');
-            });
-        }
     }
+
+    /* Turbine schematic: hover or focus a part to read how it is modeled */
+    const caption = $('.sch-caption');
+    const capTitle = $('b', caption);
+    const capText = $('span', caption);
+    const defTitle = capTitle.textContent;
+    const defText = capText.textContent;
+    let capTimer;
+    const showPart = (part) => {
+        clearTimeout(capTimer);
+        $$('.part').forEach((p) => p.classList.toggle('on', p === part));
+        caption.classList.add('swap');
+        capTimer = setTimeout(() => {
+            capTitle.textContent = part ? part.dataset.title + '.' : defTitle;
+            capText.textContent = part ? part.dataset.text : defText;
+            caption.classList.remove('swap');
+        }, 120);
+    };
+    $$('.part').forEach((p) => {
+        p.addEventListener('pointerenter', () => showPart(p));
+        p.addEventListener('focus', () => showPart(p));
+        p.addEventListener('pointerleave', () => showPart(null));
+        p.addEventListener('blur', () => showPart(null));
+        p.addEventListener('click', () => { location.hash = '#projects'; });
+    });
 
     /* Scroll reveal with per-group stagger */
     $$('[data-stagger]').forEach((group) => {
@@ -85,6 +88,7 @@
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     $$('.reveal').forEach((el) => revealIO.observe(el));
+    $$('h2').forEach((h) => revealIO.observe(h));
 
     /* Count-up */
     function countUp(el) {
@@ -101,33 +105,14 @@
         })(start);
     }
 
-    /* Nav: active section + sliding indicator */
-    const links = $$('.links a');
-    const indicator = $('.indicator');
-    const moveIndicator = (link) => {
-        if (!link) { indicator.style.opacity = '0'; return; }
-        indicator.style.opacity = '1';
-        indicator.style.width = link.offsetWidth + 'px';
-        indicator.style.transform = `translateX(${link.offsetLeft}px)`;
-    };
-    const setActive = (id) => {
-        let active = null;
-        links.forEach((l) => {
-            const on = l.getAttribute('href') === '#' + id;
-            l.classList.toggle('active', on);
-            if (on) active = l;
-        });
-        moveIndicator(active);
-    };
+    /* Section index: mark the section in view */
+    const indexLinks = $$('.index a');
+    const setActive = (id) => indexLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
     const sectionIO = new IntersectionObserver((entries) => {
         entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    $$('main section[id]').forEach((s) => sectionIO.observe(s));
-    const hero = $('.hero');
-    new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) setActive('');
-    }, { rootMargin: '-45% 0px -50% 0px' }).observe(hero);
-    addEventListener('resize', () => moveIndicator($('.links a.active')));
+    [...$$('main section[id]'), $('#contact')].forEach((s) => sectionIO.observe(s));
+    new IntersectionObserver((entries) => { if (entries[0].isIntersecting) setActive('top'); }, { rootMargin: '-45% 0px -50% 0px' }).observe($('.hero'));
 
     /* Software scroller buttons */
     const scroller = $('.scroller');
@@ -158,11 +143,11 @@
 
     /* Accordion slider */
     const panels = $$('.panel');
-    const caption = $('.caption');
-    const setCaption = (p) => {
-        $('.cap-title', caption).textContent = p.dataset.title;
-        $('.cap-body', caption).textContent = p.dataset.text;
-        $('.cap-tools', caption).textContent = p.dataset.tools;
+    const studyCaption = $('.caption');
+    const setStudyCaption = (p) => {
+        $('.cap-title', studyCaption).textContent = p.dataset.title;
+        $('.cap-body', studyCaption).textContent = p.dataset.text;
+        $('.cap-tools', studyCaption).textContent = p.dataset.tools;
     };
     const activate = (panel) => {
         if (panel.classList.contains('active')) return;
@@ -171,15 +156,15 @@
             p.classList.toggle('active', on);
             p.setAttribute('aria-selected', on);
         });
-        caption.classList.add('swap');
-        setTimeout(() => { setCaption(panel); caption.classList.remove('swap'); }, 200);
+        studyCaption.classList.add('swap');
+        setTimeout(() => { setStudyCaption(panel); studyCaption.classList.remove('swap'); }, 200);
     };
     panels.forEach((p) => {
         p.addEventListener('click', () => activate(p));
         p.addEventListener('focus', () => activate(p));
         if (finePointer) p.addEventListener('pointerenter', () => activate(p));
     });
-    setCaption($('.panel.active'));
+    setStudyCaption($('.panel.active'));
 
     /* Copy email with toast */
     const toast = $('.toast');

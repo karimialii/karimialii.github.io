@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
     <link rel="stylesheet" href="style.css">
@@ -25,42 +25,49 @@
     </script>
 </head>
 <body>
-    <div class="progress" aria-hidden="true"></div>
-    <div class="glow" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="grid-hot" aria-hidden="true"></div>
+    <div class="frame" aria-hidden="true">
+        <div class="zones top"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div>
+        <div class="zones side"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+    </div>
 
-    <header class="nav">
-        <div class="wrap nav-row">
-            <a href="#top" class="brand" aria-label="Ali Karimi, back to top">
-                <span class="mark">AK</span>
-                <span class="brand-name">Ali Karimi</span>
-            </a>
-            <nav class="links" aria-label="Primary">
-                <span class="indicator" aria-hidden="true"></span>
-                <a href="#about">About</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#projects">Projects</a>
-                <a href="#studies">Studies</a>
-                <a href="#publications">Papers</a>
-            </nav>
-            <div class="nav-actions">
-                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
-                    <i class="ph ph-sun sun"></i>
-                    <i class="ph ph-moon moon"></i>
-                </button>
-                <a class="btn primary sm" href="mailto:ilakarimiila@gmail.com" data-magnetic>Get in touch</a>
-            </div>
+    <header class="top">
+        <a href="#top" class="brand" aria-label="Ali Karimi, back to top">
+            <span class="mark">AK</span>
+            <span class="brand-meta"><b>Ali Karimi</b><span>Energy systems researcher</span></span>
+        </a>
+        <div class="top-actions">
+            <button class="icon-btn theme-toggle" type="button" aria-label="Toggle light and blueprint theme">
+                <i class="ph ph-sun sun"></i>
+                <i class="ph ph-moon moon"></i>
+            </button>
+            <a class="btn primary sm" href="mailto:ilakarimiila@gmail.com" data-magnetic>Get in touch</a>
         </div>
     </header>
+
+    <nav class="index" aria-label="Sections">
+        <a href="#top" data-label="Intro"><i></i></a>
+        <a href="#about" data-label="About"><i></i></a>
+        <a href="#expertise" data-label="Expertise"><i></i></a>
+        <a href="#projects" data-label="Projects"><i></i></a>
+        <a href="#studies" data-label="Studies"><i></i></a>
+        <a href="#publications" data-label="Papers"><i></i></a>
+        <a href="#contact" data-label="Contact"><i></i></a>
+    </nav>
 
     <main id="top">
         <section class="hero">
             <div class="wrap hero-grid">
-                <div class="hero-copy">
-                    <p class="eyebrow in" style="--d:0"><i class="ph-bold ph-lightning"></i>Postdoctoral researcher</p>
+                <div class="hero-head">
+                    <p class="eyebrow in" style="--d:0">Postdoctoral researcher</p>
                     <h1>
                         <span class="line"><span class="inner" style="--d:1">Models and data</span></span>
-                        <span class="line"><span class="inner" style="--d:2">for <em>energy systems.</em></span></span>
+                        <span class="line"><span class="inner" style="--d:2">for energy systems.</span></span>
                     </h1>
+                </div>
+                <div class="hero-copy">
+                    <div class="dim in" style="--d:3" aria-hidden="true"><span>Hybrid energy systems</span></div>
                     <p class="lede in" style="--d:3">
                         At the University of Stavanger, I build simulation, optimization and data tools for hybrid energy systems.
                     </p>
@@ -74,60 +81,69 @@
                     </div>
                 </div>
 
-                <figure class="portrait in" style="--d:2" data-tilt>
-                    <div class="ring"></div>
-                    <img src="img/profile.jpg" alt="Portrait of Ali Karimi" width="900" height="900">
+                <figure class="schematic in" style="--d:2">
+                    <svg viewBox="0 0 540 300" role="img" aria-label="Line drawing of a recuperated micro gas turbine">
+                        <defs>
+                            <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                <path d="M0,0 L8,4 L0,8 z" class="arrowhead"/>
+                            </marker>
+                        </defs>
+
+                        <g class="pipes">
+                            <path class="pipe" pathLength="1" d="M4,200 L30,200" marker-end="url(#arr)"/>
+                            <path class="pipe" pathLength="1" d="M100,172 L100,38 L130,38"/>
+                            <path class="pipe" pathLength="1" d="M230,38 L250,38 L250,52 L270,52"/>
+                            <path class="pipe" pathLength="1" d="M340,52 L365,52 L365,172"/>
+                            <path class="pipe" pathLength="1" d="M435,150 L435,108 L244,108 L244,68 L230,68"/>
+                            <path class="pipe" pathLength="1" d="M130,68 L116,68" marker-end="url(#arr)"/>
+                            <path class="shaft" d="M100,200 L365,200 M435,200 L470,200"/>
+                        </g>
+                        <g class="flows">
+                            <path class="flow air" d="M4,200 L30,200"/>
+                            <path class="flow air" d="M100,172 L100,38 L130,38"/>
+                            <path class="flow air" d="M230,38 L250,38 L250,52 L270,52"/>
+                            <path class="flow hot" d="M340,52 L365,52 L365,172"/>
+                            <path class="flow hot" d="M435,150 L435,108 L244,108 L244,68 L230,68"/>
+                            <path class="flow hot" d="M130,68 L116,68"/>
+                        </g>
+
+                        <g class="part" tabindex="0" data-title="Compressor" data-text="Compressor maps from the T100 test rig feed the 1D model.">
+                            <polygon points="30,150 100,172 100,228 30,250"/>
+                            <text x="65" y="272">COMPRESSOR</text>
+                        </g>
+                        <g class="part" tabindex="0" data-title="Recuperator" data-text="Counterflow heat exchange between exhaust gas and compressed air.">
+                            <rect x="130" y="25" width="100" height="55"/>
+                            <path class="hatch" d="M146,25 L146,80 M162,25 L162,80 M178,25 L178,80 M194,25 L194,80 M210,25 L210,80"/>
+                            <text x="180" y="16">RECUPERATOR</text>
+                        </g>
+                        <g class="part" tabindex="0" data-title="Combustor" data-text="Equilibrium-chemistry combustor, including hydrogen-fuelled operation.">
+                            <rect x="270" y="30" width="70" height="50"/>
+                            <path class="flame" d="M305,70 C296,62 298,53 305,46 C307,52 314,54 313,62 C313,66 309,70 305,70 z"/>
+                            <text x="305" y="21">COMBUSTOR</text>
+                        </g>
+                        <g class="part" tabindex="0" data-title="Turbine" data-text="Steady and transient turbine models, validated against 16 measured operating points.">
+                            <polygon points="365,172 435,150 435,250 365,228"/>
+                            <text x="400" y="272">TURBINE</text>
+                        </g>
+                        <g class="part" tabindex="0" data-title="Generator" data-text="Shaft speed and power are held by PID control loops in the model.">
+                            <circle cx="494" cy="200" r="24"/>
+                            <text class="big" x="494" y="205">G</text>
+                            <text x="494" y="242">GENERATOR</text>
+                        </g>
+                    </svg>
+                    <figcaption class="sch-caption"><b>Recuperated micro gas turbine.</b> <span>Hover a part to see how I model it.</span></figcaption>
                 </figure>
             </div>
 
             <div class="wrap">
                 <ul class="facts" data-stagger>
-                    <li class="fact reveal">
-                        <i class="ph ph-clock-countdown"></i>
-                        <b><span data-count="5">5</span>+</b>
-                        <span>Years of experience</span>
-                    </li>
-                    <li class="fact reveal">
-                        <i class="ph ph-quotes"></i>
-                        <b data-count="365">365</b>
-                        <span>Citations</span>
-                    </li>
-                    <li class="fact reveal">
-                        <i class="ph ph-article"></i>
-                        <b data-count="14">14</b>
-                        <span>Publications</span>
-                    </li>
-                    <li class="fact reveal">
-                        <i class="ph ph-graduation-cap"></i>
-                        <b>PhD</b>
-                        <span>Industrial Engineering</span>
-                    </li>
+                    <li class="fact reveal"><span class="cap">Experience</span><b><span data-count="5">5</span>+</b><span class="unit">years</span></li>
+                    <li class="fact reveal"><span class="cap">Citations</span><b data-count="365">365</b><span class="unit">Google Scholar</span></li>
+                    <li class="fact reveal"><span class="cap">Publications</span><b data-count="14">14</b><span class="unit">papers</span></li>
+                    <li class="fact reveal"><span class="cap">Degree</span><b>PhD</b><span class="unit">Industrial Engineering</span></li>
                 </ul>
             </div>
         </section>
-
-        <div class="ticker" aria-label="Tools I work with">
-            <div class="track">
-                <ul>
-                    <li title="Python"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/python.svg)"></i></li>
-                    <li title="NumPy"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/numpy.svg)"></i></li>
-                    <li title="pandas"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/pandas.svg)"></i></li>
-                    <li title="scikit-learn"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/scikitlearn.svg)"></i></li>
-                    <li title="PyTorch"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/pytorch.svg)"></i></li>
-                    <li title="TensorFlow"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/tensorflow.svg)"></i></li>
-                    <li title="FastAPI"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/fastapi.svg)"></i></li>
-                    <li title="React"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/react.svg)"></i></li>
-                    <li title="TypeScript"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/typescript.svg)"></i></li>
-                    <li title="PostgreSQL"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/postgresql.svg)"></i></li>
-                    <li title="Docker"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/docker.svg)"></i></li>
-                    <li title="Git"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/git.svg)"></i></li>
-                    <li title="Linux"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/linux.svg)"></i></li>
-                    <li title="Plotly"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/plotly.svg)"></i></li>
-                    <li title="ANSYS"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/ansys.svg)"></i></li>
-                    <li title="COMSOL"><i style="--icon:url(https://cdn.jsdelivr.net/npm/simple-icons@13.15.0/icons/comsol.svg)"></i></li>
-                </ul>
-            </div>
-        </div>
 
         <section id="about">
             <div class="wrap about-grid">
@@ -147,44 +163,50 @@
                         <p>I care about models that are validated against measured data and that other people can run.</p>
                     </div>
                 </div>
-                <ul class="about-facts" data-stagger>
-                    <li class="reveal"><i class="ph ph-buildings"></i><div><b>Postdoctoral researcher</b><span>University of Stavanger, 2025 to 2028</span></div></li>
-                    <li class="reveal"><i class="ph ph-graduation-cap"></i><div><b>PhD, Industrial Engineering</b><span>University of Naples Federico II</span></div></li>
-                    <li class="reveal"><i class="ph ph-map-pin"></i><div><b>Stavanger, Norway</b><span>Open to collaboration</span></div></li>
-                    <li class="reveal"><i class="ph ph-flask"></i><div><b>Focus</b><span>Hybrid energy systems, digital twins</span></div></li>
-                </ul>
+                <aside class="detail reveal">
+                    <div class="callout">
+                        <svg viewBox="0 0 160 160" aria-hidden="true"><circle class="ring-a" cx="80" cy="80" r="77"/><circle class="ring-b" cx="80" cy="80" r="70"/></svg>
+                        <img src="img/profile.jpg" alt="Portrait of Ali Karimi" width="900" height="900">
+                    </div>
+                    <p class="detail-label"><b>Detail A</b> The author</p>
+                    <ul class="about-facts">
+                        <li><i class="ph ph-buildings"></i><div><b>Postdoctoral researcher</b><span>University of Stavanger, 2025 to 2028</span></div></li>
+                        <li><i class="ph ph-graduation-cap"></i><div><b>PhD, Industrial Engineering</b><span>University of Naples Federico II</span></div></li>
+                        <li><i class="ph ph-map-pin"></i><div><b>Stavanger, Norway</b><span>Open to collaboration</span></div></li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
         <section id="expertise">
             <div class="wrap">
                 <h2 class="reveal">Four disciplines, one workflow.</h2>
-                <div class="bento" data-stagger>
-                    <article class="tile t1 spot reveal">
-                        <div class="icon-box"><i class="ph ph-thermometer-hot"></i></div>
-                        <h3>Thermal-fluid modeling</h3>
-                        <p>1D steady-state and transient models of gas turbines, Rankine cycles and heat-pump systems, validated against test-rig data.</p>
+                <ol class="bom" data-stagger>
+                    <li class="bom-row reveal">
+                        <span class="balloon">1</span>
+                        <div class="bom-main"><h3>Thermal-fluid modeling</h3><p>1D steady-state and transient models of gas turbines, Rankine cycles and heat-pump systems, validated against test-rig data.</p></div>
                         <ul class="chips"><li>ThermoWave</li><li>Flownex</li><li>TESPy</li><li>CoolProp</li></ul>
-                    </article>
-                    <article class="tile t2 spot reveal">
-                        <div class="icon-box"><i class="ph ph-sliders-horizontal"></i></div>
-                        <h3>Optimization and control</h3>
-                        <p>Scheduling and control of storage, heat pumps and hybrid systems under changing electricity prices.</p>
+                        <i class="ph ph-thermometer-hot row-icon"></i>
+                    </li>
+                    <li class="bom-row reveal">
+                        <span class="balloon">2</span>
+                        <div class="bom-main"><h3>Optimization and control</h3><p>Scheduling and control of storage, heat pumps and hybrid systems under changing electricity prices.</p></div>
                         <ul class="chips"><li>MILP</li><li>SLSQP</li><li>GA</li><li>PID</li><li>Deep RL</li></ul>
-                    </article>
-                    <article class="tile t3 spot reveal">
-                        <div class="icon-box"><i class="ph ph-database"></i></div>
-                        <h3>Data engineering</h3>
-                        <p>Pipelines that clean, store and serve sensor data from real installations.</p>
+                        <i class="ph ph-sliders-horizontal row-icon"></i>
+                    </li>
+                    <li class="bom-row reveal">
+                        <span class="balloon">3</span>
+                        <div class="bom-main"><h3>Data engineering</h3><p>Pipelines that clean, store and serve sensor data from real installations.</p></div>
                         <ul class="chips"><li>Python</li><li>SQL</li><li>FastAPI</li><li>ETL</li></ul>
-                    </article>
-                    <article class="tile t4 spot reveal">
-                        <div class="icon-box"><i class="ph ph-cube"></i></div>
-                        <h3>CFD and CAD</h3>
-                        <p>Heat-exchanger and fluid-system simulation, plus product-level CAD modeling and rendering.</p>
+                        <i class="ph ph-database row-icon"></i>
+                    </li>
+                    <li class="bom-row reveal">
+                        <span class="balloon">4</span>
+                        <div class="bom-main"><h3>CFD and CAD</h3><p>Heat-exchanger and fluid-system simulation, plus product-level CAD modeling and rendering.</p></div>
                         <ul class="chips"><li>ANSYS</li><li>COMSOL</li><li>SolidWorks</li><li>KeyShot</li></ul>
-                    </article>
-                </div>
+                        <i class="ph ph-cube row-icon"></i>
+                    </li>
+                </ol>
             </div>
         </section>
 
@@ -203,40 +225,40 @@
             <div class="scroller" tabindex="0" aria-label="Software projects">
                 <div class="scroller-track">
                     <a class="card spot" href="https://github.com/karimialii/ThermoWave" target="_blank" rel="noopener">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-flow-arrow"></i></div><span class="tag">Open source</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-flow-arrow"></i></div></div>
                         <h4>ThermoWave</h4>
                         <p>A 1D thermodynamic network solver for steady-state and transient thermal-fluid systems, with five public benchmark cases.</p>
-                        <span class="more">View on GitHub<i class="ph-bold ph-arrow-up-right"></i></span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Public</dd></div><div><dt>Lang</dt><dd>Python</dd></div><div class="go"><i class="ph-bold ph-arrow-up-right"></i></div></dl>
                     </a>
                     <a class="card spot" href="https://github.com/karimialii/gasoptics" target="_blank" rel="noopener">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-wind"></i></div><span class="tag">Open source</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-wind"></i></div></div>
                         <h4>GasOptics</h4>
                         <p>A Python library for thermodynamic and transport properties of gases and humid air, with unit conversion.</p>
-                        <span class="more">View on GitHub<i class="ph-bold ph-arrow-up-right"></i></span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Public</dd></div><div><dt>Lang</dt><dd>Python</dd></div><div class="go"><i class="ph-bold ph-arrow-up-right"></i></div></dl>
                     </a>
                     <a class="card spot" href="https://github.com/karimialii/Weather-Data" target="_blank" rel="noopener">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-cloud-sun"></i></div><span class="tag">Open source</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-cloud-sun"></i></div></div>
                         <h4>Weather Dashboard</h4>
                         <p>A browser tool for forecasts and historical weather, with solar-irradiance and wind analysis.</p>
-                        <span class="more">View on GitHub<i class="ph-bold ph-arrow-up-right"></i></span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Public</dd></div><div><dt>Lang</dt><dd>JavaScript</dd></div><div class="go"><i class="ph-bold ph-arrow-up-right"></i></div></dl>
                     </a>
                     <div class="card spot">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-house-line"></i></div><span class="tag">Private</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-house-line"></i></div></div>
                         <h4>EcoHeat Sim and Norge Price</h4>
                         <p>Annual hourly simulation of Norwegian residential heating, comparing direct electric heating with a solar heat pump and storage.</p>
-                        <span class="more muted"><i class="ph ph-lock-simple"></i>Private repository</span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Private</dd></div><div><dt>Lang</dt><dd>Python</dd></div><div class="go"><i class="ph ph-lock-simple"></i></div></dl>
                     </div>
                     <div class="card spot">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-chart-line-up"></i></div><span class="tag">Private</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-chart-line-up"></i></div></div>
                         <h4>EcoCloud and Energy Central</h4>
                         <p>Analysis and live monitoring of data from an integrated solar, battery and heat-pump installation, with a machine-learning digital twin.</p>
-                        <span class="more muted"><i class="ph ph-lock-simple"></i>Private repository</span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Private</dd></div><div><dt>Lang</dt><dd>Python, TS</dd></div><div class="go"><i class="ph ph-lock-simple"></i></div></dl>
                     </div>
                     <div class="card spot">
-                        <div class="card-top"><div class="icon-box"><i class="ph ph-gauge"></i></div><span class="tag">Private</span></div>
+                        <div class="card-top"><div class="icon-box"><i class="ph ph-gauge"></i></div></div>
                         <h4>OriCalc</h4>
                         <p>A licensed desktop and web tool for orifice flow calculations.</p>
-                        <span class="more muted"><i class="ph ph-lock-simple"></i>Private repository</span>
+                        <dl class="tblock"><div><dt>Repo</dt><dd>Private</dd></div><div><dt>Lang</dt><dd>Python</dd></div><div class="go"><i class="ph ph-lock-simple"></i></div></dl>
                     </div>
                 </div>
             </div>
@@ -396,16 +418,20 @@
                     </button>
                 </div>
             </div>
-            <div class="foot-row">
-                <ul class="socials">
-                    <li><a href="https://github.com/karimialii" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/alikarimiii/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a></li>
-                    <li><a href="https://x.com/ilakarimii" target="_blank" rel="noopener" aria-label="X"><i class="ph ph-x-logo"></i></a></li>
-                    <li><a href="https://scholar.google.com/citations?user=nRRz0EwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ph ph-graduation-cap"></i></a></li>
-                    <li><a href="https://orcid.org/0000-0002-0015-9180" target="_blank" rel="noopener" aria-label="ORCID"><i class="ph ph-identification-badge"></i></a></li>
-                </ul>
-                <p>© 2026 Ali Karimi</p>
-                <a class="to-top" href="#top" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></a>
+            <div class="title-block reveal">
+                <div class="tb-cell wide"><span class="cap">Drawn by</span><b>Ali Karimi</b></div>
+                <div class="tb-cell"><span class="cap">Affiliation</span><b>University of Stavanger</b></div>
+                <div class="tb-cell"><span class="cap">Year</span><b>2026</b></div>
+                <div class="tb-cell links-cell">
+                    <ul class="socials">
+                        <li><a href="https://github.com/karimialii" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/alikarimiii/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a></li>
+                        <li><a href="https://x.com/ilakarimii" target="_blank" rel="noopener" aria-label="X"><i class="ph ph-x-logo"></i></a></li>
+                        <li><a href="https://scholar.google.com/citations?user=nRRz0EwAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ph ph-graduation-cap"></i></a></li>
+                        <li><a href="https://orcid.org/0000-0002-0015-9180" target="_blank" rel="noopener" aria-label="ORCID"><i class="ph ph-identification-badge"></i></a></li>
+                    </ul>
+                    <a class="to-top" href="#top" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></a>
+                </div>
             </div>
         </div>
     </footer>
